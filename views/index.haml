@@ -1,0 +1,163 @@
+- symbol = :index_desc_first
+- Current_uri = request.path_info
+.jumbotron.text-center.shadow
+	.page-header{ :style => "padding:0"}
+		-# %h2{ :itemprop => "name"}  ADICOM Praha
+		%h2{ :itemprop => "name"}= @phrase[:company_name]
+	%div{ :itemprop => "description"}
+		-# %p.jumbotext Měřící a regulační technika
+		%p.jumbotext= @phrase[:index_desc_first]
+		%p.jumbotext= @phrase[:index_desc_second]
+		%p.jumbotext= @phrase[:index_desc_third]
+.container-fluid
+	.row#frontpage-row{ :style => "padding:0"}
+		.col-sm-6#carousel
+			.carousel.slide#myCarousel{ "data-ride" => "carousel", :style => "height:inherit"}
+				%ol.carousel-indicators
+				.carousel-inner{ :role => "listbox"}
+					- @images.each do |image|
+						- if image == 'fb_1.jpg'
+							- isactive = 'active item'
+						- else
+							- isactive = 'item'
+						%div{ :class => isactive}
+							%img{ :src => "car-images/#{image}"}
+				%a.left.carousel-control{ "data-slide" => "prev", :href => "#myCarousel", :role => "button"}
+					%span.glyphicon.glyphicon-chevron-left{ "aria-hidden" => "true"}
+					%span.sr-only Previous
+				%a.right.carousel-control{ "data-slide" => "next", :href => "#myCarousel", :role => "button"}
+					%span.glyphicon.glyphicon-chevron-right{ "aria-hidden" => "true"}
+					%span.sr-only Next
+
+		.col-sm-6#divnews{ :style => "height:450px;padding-top:25px"}
+			.nano
+				.nano-content
+					%h2= @phrase[:news]
+					.line-separator
+					%p{ :style => "padding-top:5px"}
+						%span.date 23.01.2017
+						%h3 Adibase
+						\- nový program na vytváření a správu produktových databází malých až středních firem. Kompatibilní s MySQL a MSSQL.
+						%br
+						\- nový program na vytváření a správu produktových databází malých až středních firem. Kompatibilní s MySQL a MSSQL.
+						%br
+						\- nový program na vytváření a správu produktových databází malých až středních firem. Kompatibilní s MySQL a MSSQL.
+						%br
+					%img{ :src => "images/newsimage.jpg", :alt => "novinky", :style => "height:360px; position:float; padding:8px 0 8px 0"}
+					%p
+						%span.date 21.12.2016
+						Spuštění nového webu společnosti ADICOM Praha, s.r.o.
+.container-fluid.contact#contact
+	.row
+		.col-sm-offset-2.col-sm-3{ :style => "padding:50px 40px"}
+			%h2= @phrase[:contact_headline]
+			%div{ :itemprop => "address", :itemscope => "true" , :itemtype => "http://schema.org/PostalAddress"}
+				%p{ :itemprop => "streetAddress"}
+					%span.glyphicon.glyphicon-map-marker
+					Františka Kadlece 9
+				%p{ :style => "text-indent:18px"}
+					%span{ :itemprop => "postalCode"} 180 00
+					%span{ :itemprop => "addressLocality"} Praha 8
+				%p{ :itemprop => "addressCountry", :style => "text-indent:18px"}= @phrase[:czrepublic]
+				%p{ :itemprop => "telephone"}
+					%span.glyphicon.glyphicon-phone
+					+420 283 842 047
+				%p{ :itemprop => "telephone"}
+					%span.glyphicon.glyphicon-phone
+					+420 603 475 161
+				%p{ :itemprop => "email"}
+					%span.glyphicon.glyphicon-envelope
+					info@mereni.cz	
+		.col-sm-5{ :style => "padding: 50px 40px"}
+			.container-fluid#map{ :itemprop => "location", :style => "height:300px;width:100%"}
+			:javascript
+				var map;
+
+				function initMap() {
+				map = new google.maps.Map(document.getElementById('map'), {
+				center: {
+					lat: 50.1160542,
+					lng: 14.4733339
+					},
+
+					zoom: 16
+					});
+					var marker = new google.maps.Marker({
+					position: {
+					lat: 50.1160542,
+					lng: 14.4733339
+					},
+					map: map,
+					title: 'ADICOM Praha, s.r.o.'
+					});
+					}
+.footerseparator.container-fluid
+%footer.mdl-mega-footer
+	.mdl-mega-footer__middle-section
+		.mdl-mega-footer__drop-down-section
+			%h1.mdl-mega-footer__heading= @phrase[:abouthead]
+			%ul.mdl-mega-footer__link-list
+				%li
+					%a{ :href => '/about#zakladniudaje'}= @phrase[:basicinfo]
+				%li
+					%a{ :href => '/about#nabidka'}= @phrase[:offers]
+				%li
+					%a{ :href => '/about#historie'}= @phrase[:history]
+		.mdl-mega-footer__drop-down-section
+			%h1.mdl-mega-footer__heading= @phrase[:products]
+			%ul.mdl-mega-footer__link-list
+				%li
+					%a{ :href => '/products'}= @phrase[:products]
+				%li
+					%a{ :href => '/prodej'}= @phrase[:sale]
+				%li
+					%a{ :href => '/support'}= @phrase[:support]
+%footer.mdl-mini-footer
+	.mdl-mini-footer__left-section.col-sm-offset-4
+		.mdl-logo= @phrase[:company_name_long]
+		%ul.mdl-mini-footer__link-list
+			%li Jazyk:
+			%li
+				%a{ :href => "#{Current_uri}"} Čeština
+			%li
+				%a{ :href => "#{Current_uri}?en"} English
+	.mdl-mini-footer__right-section
+/ JS Scripts
+%script{:async => true, :defer => true, :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyBFNxVlOJl6dpV41hc8mRjlhnmxcy4HJNU&callback=initMap"}
+%script{:src => "scripts/jquery-1.9.1.min.js"}
+%script{:src => "scripts/bootstrap.min.js"}
+%script{:src => "scripts/material.min.js"}
+%script{:src => "scripts/ripples.min.js"}
+:javascript
+	$.material.init()
+:javascript
+	$.material.ripples()
+:javascript
+	$(document).on('click', '.navbar-collapse.in', function (e) {
+		if ($(e.target).is('a')) {
+			$(this).collapse('hide');
+		}
+	});
+%script{:async => true}
+	(function (i, s, o, g, r, a, m) {
+	i['GoogleAnalyticsObject'] = r;
+	i[r] = i[r] || function () {
+	(i[r].q = i[r].q || []).push(arguments)
+	}, i[r].l = 1 * new Date();
+	a = s.createElement(o),
+	m = s.getElementsByTagName(o)[0];
+	a.async = 1;
+	a.src = g;
+	m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-76960340-1', 'auto');
+	ga('send', 'pageview');
+
+%script{:src => "scripts/nano.js"}
+:javascript
+	$(".nano").nanoScroller()
+:javascript
+	$(function(){
+	$('#myCarousel').carousel();
+	});

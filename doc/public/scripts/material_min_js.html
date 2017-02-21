@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>material.min.js - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+  var index_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../public/scripts/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../public/scripts/handlebars-v4_0_5_js.html">handlebars-v4.0.5.js</a>
+  
+    <li><a href="../../public/scripts/jquery-1_9_1_min_js.html">jquery-1.9.1.min.js</a>
+  
+    <li><a href="../../public/scripts/material_min_js.html">material.min.js</a>
+  
+    <li><a href="../../public/scripts/nano_js.html">nano.js</a>
+  
+    <li><a href="../../public/scripts/ripples_min_js.html">ripples.min.js</a>
+  
+    <li><a href="../../public/styles/bootstrap-material-design_min_css.html">bootstrap-material-design.min.css</a>
+  
+    <li><a href="../../public/styles/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../../public/styles/main_css.html">main.css</a>
+  
+    <li><a href="../../public/styles/ripples_min_css.html">ripples.min.css</a>
+  
+    <li><a href="../../views/about_haml.html">about.haml</a>
+  
+    <li><a href="../../views/index_haml.html">index.haml</a>
+  
+    <li><a href="../../views/layout_haml.html">layout.haml</a>
+  
+    <li><a href="../../views/products_haml.html">products.haml</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page public/scripts/material.min.js">
+
+<p>!function(a){function b(a){return“undefined”==typeof
+a.which?!0:“number”==typeof
+a.which&amp;&amp;a.which&gt;0?!a.ctrlKey&amp;&amp;!a.metaKey&amp;&amp;!a.altKey&amp;&amp;8!=a.which&amp;&amp;9!=a.which&amp;&amp;13!=a.which&amp;&amp;16!=a.which&amp;&amp;17!=a.which&amp;&amp;20!=a.which&amp;&amp;27!=a.which:!1}function
+c(b){var
+c=a(b);c.prop(“disabled”)||c.closest(“.form-group”).addClass(“is-focused”)}function
+d(a,b){var c;return
+c=a.hasClass(“checkbox-inline”)||a.hasClass(“radio-inline”)?a:a.closest(“.checkbox”).length?a.closest(“.checkbox”):a.closest(“.radio”),c.toggleClass(“disabled”,b)}function
+e(b){var
+e=!1;(b.is(a.material.options.checkboxElements)||b.is(a.material.options.radioElements))&amp;&amp;(e=!0),b.closest(“label”).hover(function(){var
+b=a(this).find(“input”),f=b.prop(“disabled”);e&amp;&amp;d(a(this),f),f||c(b)},function(){f(a(this).find(“input”))})}function
+f(b){a(b).closest(“.form-group”).removeClass(“is-focused”)}<a
+href="":"">a.expr</a>.notmdproc=function(b){return
+a(b).data(“mdproc”)?!1:!0},a.material={options:{validate:!0,input:!0,ripples:!0,checkbox:!0,togglebutton:!0,radio:!0,arrive:!0,autofill:!1,withRipples:[“.btn:not(.btn-link)”,“.card-image”,“.navbar
+a:not(.withoutripple)”,“.dropdown-menu a”,“.nav-tabs
+a:not(.withoutripple)”,“.withripple”,“.pagination
+li:not(.active):not(.disabled)
+a:not(.withoutripple)”].join(“,”),inputElements:“input.form-control,
+textarea.form-control, select.form-control”,checkboxElements:“.checkbox
+&gt; label &gt; <a href="type=checkbox">input</a>, label.checkbox-inline
+&gt; <a href="type=checkbox">input</a>”,togglebuttonElements:“.togglebutton
+&gt; label &gt; <a href="type=checkbox">input</a>”,radioElements:“.radio
+&gt; label &gt; <a href="type=radio">input</a>, label.radio-inline &gt; <a
+href="type=radio">input</a>”},checkbox:function(b){var
+c=a(b?b:this.options.checkboxElements).filter(“:notmdproc”).data(“mdproc”,!0).after(“&lt;span
+class=&#39;checkbox-material&#39;&gt;&lt;span
+class=&#39;check&#39;&gt;&lt;/span&gt;&lt;/span&gt;”);e©},togglebutton:function(b){var
+c=a(b?b:this.options.togglebuttonElements).filter(“:notmdproc”).data(“mdproc”,!0).after(“&lt;span
+class=&#39;toggle&#39;&gt;&lt;/span&gt;”);e©},radio:function(b){var
+c=a(b?b:this.options.radioElements).filter(“:notmdproc”).data(“mdproc”,!0).after(“&lt;span
+class=&#39;circle&#39;&gt;&lt;/span&gt;&lt;span
+class=&#39;check&#39;&gt;&lt;/span&gt;”);e©},input:function(b){a(b?b:this.options.inputElements).filter(“:notmdproc”).data(“mdproc”,!0).each(function(){var
+b=a(this),c=b.closest(“.form-group”);0!==c.length||“hidden”===b.attr(“type”)||b.attr(“hidden”)||(b.wrap(“&lt;div
+class=&#39;form-group&#39;&gt;&lt;/div&gt;”),c=b.closest(“.form-group”)),b.attr(“data-hint”)&amp;&amp;(b.after(“&lt;p
+class=&#39;help-block&#39;&gt;”+b.attr(“data-hint”)+“&lt;/p&gt;”),b.removeAttr(“data-hint”));var
+d={“input-lg”:“form-group-lg”,“input-sm”:“form-group-sm”};if(a.each(d,function(a,d){b.hasClass(a)&amp;&amp;(b.removeClass(a),c.addClass(d))}),b.hasClass(“floating-label”)){var
+e=b.attr(“placeholder”);b.attr(“placeholder”,null).removeClass(“floating-label”);var
+f=b.attr(“id”),g=“”;f&amp;&amp;(g=“for=&#39;”<code>f</code>“&#39;”),c.addClass(“label-floating”),b.after(“&lt;label
+”<code>g</code>“class=&#39;control-label&#39;&gt;”<code>e</code>“&lt;/label&gt;”)}(<a
+href="type=file">null===b.val()||“undefined”==b.val()||“”===b.val())&&c.addClass(“is-empty”),c.find(“input</a>”).length&gt;0&amp;&amp;c.addClass(“is-fileinput”)})},attachInputEventHandlers:function(){var
+d=this.options.validate;a(document).on(“keydown
+paste”,“.form-control”,function©{b©&amp;&amp;a(this).closest(“.form-group”).removeClass(“is-empty”)}).on(“keyup
+change”,“.form-control”,function(){var
+b=a(this),c=b.closest(“.form-group”),e=“undefined”==typeof <a
+href="0">b</a>.<a
+href="0">checkValidity||b</a>.checkValidity();“”===b.val()?c.addClass(“is-empty”):c.removeClass(“is-empty”),d&amp;&amp;(e?c.removeClass(“has-error”):c.addClass(“has-error”))}).on(“focus”,“.form-control,
+.form-group.is-fileinput”,function(){c(this)}).on(“blur”,“.form-control,
+.form-group.is-fileinput”,function(){f(this)}).on(“change”,“.form-group
+input”,function(){var b=a(this);if(“file”!=b.attr(“type”)){var
+c=b.closest(“.form-group”),d=b.val();d?c.removeClass(“is-empty”):c.addClass(“is-empty”)}}).on(“change”,“.form-group.is-fileinput
+<a href="type='file'">input</a>”,function(){var
+b=a(this),c=b.closest(“.form-group”),d=“”;a.each(this.files,function(a,b){d+=b.name+“,
+”}),<a
+href="readonly">d=d.substring(0,d.length-2),d?c.removeClass(“is-empty”):c.addClass(“is-empty”),c.find(“input.form-control</a>”).val(d)})},ripples:function(b){a(b?b:this.options.withRipples).ripples()},autofill:function(){var
+b=setInterval(function(){<a
+href="type!=checkbox">a(“input</a>”).each(function(){var
+b=a(this);b.val()&amp;&amp;b.val()!==b.attr(“value”)&amp;&amp;b.trigger(“change”)})},100);setTimeout(function(){clearInterval(b)},1e4)},attachAutofillEventHandlers:function(){var
+b;a(document).on(“focus”,“input”,function(){var <a
+href="type=file">c=a(this).parents(“form”).find(“input”).not(“</a>”);b=setInterval(function(){c.each(function(){var
+b=a(this);b.val()!==b.attr(“value”)&amp;&amp;b.trigger(“change”)})},100)}).on(“blur”,“.form-group
+input”,function(){clearInterval(b)})},init:function(b){this.options=a.extend({},this.options,b);var
+c=a(document);a.fn.ripples&amp;&amp;this.options.ripples&amp;&amp;this.ripples(),this.options.input&amp;&amp;(this.input(),this.attachInputEventHandlers()),this.options.checkbox&amp;&amp;this.checkbox(),this.options.togglebutton&amp;&amp;this.togglebutton(),this.options.radio&amp;&amp;this.radio(),this.options.autofill&amp;&amp;(this.autofill(),this.attachAutofillEventHandlers()),document.arrive&amp;&amp;this.options.arrive&amp;&amp;(a.fn.ripples&amp;&amp;this.options.ripples&amp;&amp;c.arrive(this.options.withRipples,function(){a.material.ripples(a(this))}),this.options.input&amp;&amp;c.arrive(this.options.inputElements,function(){a.material.input(a(this))}),this.options.checkbox&amp;&amp;c.arrive(this.options.checkboxElements,function(){a.material.checkbox(a(this))}),this.options.radio&amp;&amp;c.arrive(this.options.radioElements,function(){a.material.radio(a(this))}),this.options.togglebutton&amp;&amp;c.arrive(this.options.togglebuttonElements,function(){a.material.togglebutton(a(this))}))}}}(jQuery);
+//# sourceMappingURL=material.min.js.map</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.0.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

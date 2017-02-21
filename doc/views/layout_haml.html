@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>layout.haml - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../public/scripts/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../public/scripts/handlebars-v4_0_5_js.html">handlebars-v4.0.5.js</a>
+  
+    <li><a href="../public/scripts/jquery-1_9_1_min_js.html">jquery-1.9.1.min.js</a>
+  
+    <li><a href="../public/scripts/material_min_js.html">material.min.js</a>
+  
+    <li><a href="../public/scripts/nano_js.html">nano.js</a>
+  
+    <li><a href="../public/scripts/ripples_min_js.html">ripples.min.js</a>
+  
+    <li><a href="../public/styles/bootstrap-material-design_min_css.html">bootstrap-material-design.min.css</a>
+  
+    <li><a href="../public/styles/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../public/styles/main_css.html">main.css</a>
+  
+    <li><a href="../public/styles/ripples_min_css.html">ripples.min.css</a>
+  
+    <li><a href="../views/about_haml.html">about.haml</a>
+  
+    <li><a href="../views/index_haml.html">index.haml</a>
+  
+    <li><a href="../views/layout_haml.html">layout.haml</a>
+  
+    <li><a href="../views/products_haml.html">products.haml</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page views/layout.haml">
+
+<p>!!! 5</p>
+<ul><li>
+<p>Current_uri = request.path_info</p>
+</li></ul>
+
+<p>%html</p>
+
+<pre>%head
+        %meta{ :charset =&gt; &quot;utf-8&quot;}
+        %meta{ &quot;http-equiv&quot; =&gt; &quot;X-UA-Compatible&quot;, :content =&gt; &quot;IE=edge&quot;}
+        %meta{ :name =&gt; &quot;viewport&quot;, :content =&gt; &quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;}
+        %meta{ :name =&gt; &quot;theme-color&quot;, :content =&gt; &quot;#2F3BA2&quot;}
+        %title ADICOM Praha | Měřící a regulační technika, sběr a přenos dat
+        %link{ :rel =&gt; &quot;stylesheet&quot;, :href =&gt; &quot;styles/bootstrap.min.css&quot; }
+        %link{ :href =&gt; &quot;https://fonts.googleapis.com/css?family=Montserrat|Roboto&amp;subset=latin-ext&quot;, :rel =&gt; &quot;stylesheet&quot;}
+        %link{ :rel=&gt; &quot;stylesheet&quot;, :href=&gt; &quot;styles/bootstrap-material-design.min.css&quot;}
+        %link{ :href =&gt; &quot;styles/main.css&quot;, :rel =&gt; &quot;stylesheet&quot;}
+%body#myPage.pagecontainer
+        .navbar.navbar-fixed-top.navbar-inverse.one-edge-shadow#nav{ &quot;data-spy&quot; =&gt; &quot;affix&quot;}
+                .navbar-inner.container-fluid
+                        .navbar-header
+                                %button.navbar-toggle{ :type =&gt; &quot;button&quot;, &quot;data-toggle&quot; =&gt; &quot;collapse&quot;, &quot;data-target&quot; =&gt; &quot;.navbar-inverse-collapse&quot;}
+                                        %span.icon-bar
+                                        %span.icon-bar
+                                        %span.icon-bar
+                                %a.navbar-brand{ :itemprop =&gt; &quot;logo&quot;, :href =&gt; &#39;/&#39;}
+                                        %img{ :src =&gt; &quot;images/adilogo_clear.png&quot;, :alt =&gt; &quot;adilogo&quot;, :width =&gt; &quot;140px&quot;}
+                        .collapse.navbar-collapse.navbar-inverse-collapse#myNavbar
+                                %ul.nav.navbar-nav.navbar-right
+                                        %li.hvr-underline-reveal{ :class =&gt; &quot;#{ &#39;active&#39; if Current_uri == &#39;/&#39;}&quot;}
+                                                %a{ :href =&gt; &#39;/&#39;} Home
+                                        %li.hvr-underline-reveal{ :class =&gt; &quot;#{ &#39;active&#39; if Current_uri == &#39;/about&#39;}&quot;}
+                                                %a{ :href =&gt; &#39;/about&#39;} O nás
+                                        %li.hvr-underline-reveal{ :class =&gt; &quot;#{ &#39;active&#39; if Current_uri == &#39;/products&#39;}&quot;}
+                                                %a{ :href =&gt; &#39;/products&#39;} Produkty
+                                        %li.hvr-underline-reveal{ :class =&gt; &quot;#{ &#39;active&#39; if Current_uri == &#39;/prodej&#39;}&quot;}
+                                                %a{ :href =&gt; &#39;/prodej&#39;} Prodej
+                                        %li.hvr-underline-reveal{ :class =&gt; &quot;#{ &#39;active&#39; if Current_uri == &#39;/support&#39;}&quot;}
+                                                %a{ :href =&gt; &#39;/support&#39;} Podpora
+                                        %li.hvr-underline-reveal
+                                                %a{ :href =&gt; &#39;/#contact&#39;} Kontakt
+        .mypage-content
+        = yield</pre>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.0.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

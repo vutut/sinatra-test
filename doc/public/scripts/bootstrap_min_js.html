@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>bootstrap.min.js - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+  var index_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../public/scripts/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../public/scripts/handlebars-v4_0_5_js.html">handlebars-v4.0.5.js</a>
+  
+    <li><a href="../../public/scripts/jquery-1_9_1_min_js.html">jquery-1.9.1.min.js</a>
+  
+    <li><a href="../../public/scripts/material_min_js.html">material.min.js</a>
+  
+    <li><a href="../../public/scripts/nano_js.html">nano.js</a>
+  
+    <li><a href="../../public/scripts/ripples_min_js.html">ripples.min.js</a>
+  
+    <li><a href="../../public/styles/bootstrap-material-design_min_css.html">bootstrap-material-design.min.css</a>
+  
+    <li><a href="../../public/styles/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../../public/styles/main_css.html">main.css</a>
+  
+    <li><a href="../../public/styles/ripples_min_css.html">ripples.min.css</a>
+  
+    <li><a href="../../views/about_haml.html">about.haml</a>
+  
+    <li><a href="../../views/index_haml.html">index.haml</a>
+  
+    <li><a href="../../views/layout_haml.html">layout.haml</a>
+  
+    <li><a href="../../views/products_haml.html">products.haml</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page public/scripts/bootstrap.min.js">
+
+<pre>!
+ Bootstrap v3.3.7 (http://getbootstrap.com)
+ Copyright 2011-2016 Twitter, Inc.
+ Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)</pre>
+
+<p>/*!</p>
+
+<pre> Generated using the Bootstrap Customizer (https://getbootstrap.com/customize/?id=eba001b38bdb9a484f6385501a03f7d4)
+ Config saved to config.json and https://gist.github.com/eba001b38bdb9a484f6385501a03f7d4
+/</pre>
+
+<p>if(“undefined”==typeof jQuery)throw new Error(“Bootstrap&#39;s JavaScript
+requires jQuery”);+function(t){“use strict”;var e=t.fn.jquery.split(“ ”)[<a
+href="0">0].split(“.”);if(e</a>&lt;<a href="1">2&&e</a>&lt;<a
+href="0">9||1==e</a>&amp;&amp;<a href="1">9==e</a>&amp;&amp;<a
+href="2">e</a>&lt;<a href="0">1||e</a>&gt;3)throw new
+Error(“Bootstrap&#39;s JavaScript requires jQuery version 1.9.1 or higher,
+but lower than version 4”)}(jQuery),+function(t){“use strict”;function
+e(e){return this.each(function(){var
+s=t(this),n=s.data(“bs.button”),o=“object”==typeof
+e&amp;&amp;e;n||s.data(“bs.button”,n=new
+i(this,o)),“toggle”==e?n.toggle():e&amp;&amp;n.setState(e)})}var
+i=function(e,s){this.$element=t(e),this.options=t.extend({},i.DEFAULTS,s),this.isLoading=!1};i.VERSION=“3.3.7”,i.DEFAULTS={loadingText:“loading…”},i.prototype.setState=function(e){var
+<a
+href="n">i=“disabled”,s=this.$element,n=s.is(“input”)?“val”:“html”,o=s.data();e+=“Text”,null==o.resetText&&s.data(“resetText”,s</a>()),setTimeout(t.proxy(function(){<a
+href="n">s</a>(<a href="e">null==o</a>?<a href="e">this.options</a>:<a
+href="e">o</a>),“loadingText”==e?(this.isLoading=!0,s.addClass(i).attr(i,i).prop(i,!0)):this.isLoading&amp;&amp;(this.isLoading=!1,s.removeClass(i).removeAttr(i).prop(i,!1))},this),0)},i.prototype.toggle=function(){var
+<a
+href="data-toggle="buttons"">t=!0,e=this.$element.closest(‘</a>&#39;);if(e.length){var
+i=this.$element.find(“input”);“radio”==i.prop(“type”)?(i.prop(“checked”)&amp;&amp;(t=!1),e.find(“.active”).removeClass(“active”),this.$element.addClass(“active”)):“checkbox”==i.prop(“type”)&amp;&amp;(i.prop(“checked”)!==this.$element.hasClass(“active”)&amp;&amp;(t=!1),this.$element.toggleClass(“active”)),i.prop(“checked”,this.$element.hasClass(“active”)),t&amp;&amp;i.trigger(“change”)}else
+this.$element.attr(“aria-pressed”,!this.$element.hasClass(“active”)),this.$element.toggleClass(“active”)};var
+s=t.fn.button;t.fn.button=e,t.fn.button.Constructor=i,t.fn.button.noConflict=function(){return
+t.fn.button=s,this},<a
+href="data-toggle^="button"">t(document).on(“click.bs.button.data-api”,’</a>&#39;,function(i){var
+<a
+href="type="radio"">s=t(i.target).closest(“.btn”);e.call(s,“toggle”),t(i.target).is(‘input</a>,
+<a
+href="type="checkbox"">input</a>&#39;)||(i.preventDefault(),s.is(“input,button”)?s.trigger(“focus”):s.find(“input:visible,button:visible”).first().trigger(“focus”))}).on(“focus.bs.button.data-api
+<a
+href="data-toggle^="button"">blur.bs.button.data-api”,’</a>&#39;,function(e){t(e.target).closest(“.btn”).toggleClass(“focus”,/^focus(in)?$/.test(e.type))})}(jQuery),+function(t){“use
+strict”;function e(e){return this.each(function(){var
+s=t(this),n=s.data(“bs.carousel”),o=t.extend({},i.DEFAULTS,s.data(),“object”==typeof
+e&amp;&amp;e),a=“string”==typeof e?e:o.slide;n||s.data(“bs.carousel”,n=new
+i(this,o)),“number”==typeof <a
+href="a">e?n.to(e):a?n</a>():o.interval&amp;&amp;n.pause().cycle()})}var
+i=function(e,i){this.$element=t(e),this.$indicators=this.$element.find(“.carousel-indicators”),this.options=i,this.paused=null,this.sliding=null,this.interval=null,this.$active=null,this.$items=null,this.options.keyboard&amp;&amp;this.$element.on(“keydown.bs.carousel”,t.proxy(this.keydown,this)),“hover”==this.options.pause&amp;&amp;!(“ontouchstart”in
+document.documentElement)&amp;&amp;this.$element.on(“mouseenter.bs.carousel”,t.proxy(this.pause,this)).on(“mouseleave.bs.carousel”,t.proxy(this.cycle,this))};i.VERSION=“3.3.7”,i.TRANSITION_DURATION=600,i.DEFAULTS={interval:5e3,pause:“hover”,wrap:!0,keyboard:!0},i.prototype.keydown=function(t){if(!/input|textarea/i.test(t.target.tagName)){switch(t.which){case
+37:this.prev();break;case
+39:this.next();break;default:return}t.preventDefault()}},i.prototype.cycle=function(e){return
+e||(this.paused=!1),this.interval&amp;&amp;clearInterval(this.interval),this.options.interval&amp;&amp;!this.paused&amp;&amp;(this.interval=setInterval(t.proxy(this.next,this),this.options.interval)),this},i.prototype.getItemIndex=function(t){return
+this.$items=t.parent().children(“.item”),this.$items.index(t||this.$active)},i.prototype.getItemForDirection=function(t,e){var
+i=this.getItemIndex(e),s=“prev”==t&amp;&amp;0===i||“next”==t&amp;&amp;i==this.$items.length-1;if(s&amp;&amp;!this.options.wrap)return
+e;var n=“prev”==t?-1:1,o=(i+n)%this.$items.length;return
+this.$items.eq(o)},i.prototype.to=function(t){var
+e=this,i=this.getItemIndex(this.$active=this.$element.find(“.item.active”));return
+t&gt;this.$items.length-1||0&gt;t?void
+0:this.sliding?this.$element.one(“slid.bs.carousel”,function(){e.to(t)}):i==t?this.pause().cycle():this.slide(t&gt;i?“next”:“prev”,this.$items.eq(t))},i.prototype.pause=function(e){return
+e||(this.paused=!0),this.$element.find(“.next,
+.prev”).length&amp;&amp;t.support.transition&amp;&amp;(this.$element.trigger(t.support.transition.end),this.cycle(!0)),this.interval=clearInterval(this.interval),this},i.prototype.next=function(){return
+this.sliding?void 0:this.slide(“next”)},i.prototype.prev=function(){return
+this.sliding?void 0:this.slide(“prev”)},i.prototype.slide=function(e,s){var
+n=this.$element.find(“.item.active”),o=s||this.getItemForDirection(e,n),a=this.interval,r=“next”==e?“left”:“right”,l=this;if(o.hasClass(“active”))return
+this.sliding=!1;var <a
+href="0">h=o</a>,d=t.Event(“slide.bs.carousel”,{relatedTarget:h,direction:r});if(this.$element.trigger(d),!d.isDefaultPrevented()){if(this.sliding=!0,a&amp;&amp;this.pause(),this.$indicators.length){this.$indicators.find(“.active”).removeClass(“active”);var
+<a
+href="this.getItemIndex(o)">c=t(this.$indicators.children()</a>);c&amp;&amp;c.addClass(“active”)}var
+p=t.Event(“slid.bs.carousel”,{relatedTarget:h,direction:r});return <a
+href="0">t.support.transition&&this.$element.hasClass(“slide”)?(o.addClass(e),o</a>.offsetWidth,n.addClass®,o.addClass®,n.one(“bsTransitionEnd”,function(){<a
+href="e,r">o.removeClass(</a>.join(“ ”)).<a
+href=""active",r">addClass(“active”),n.removeClass(</a>.join(“
+”)),l.sliding=!1,setTimeout(function(){l.$element.trigger(p)},0)}).emulateTransitionEnd(i.TRANSITION_DURATION)):(n.removeClass(“active”),o.addClass(“active”),this.sliding=!1,this.$element.trigger(p)),a&amp;&amp;this.cycle(),this}};var
+s=t.fn.carousel;t.fn.carousel=e,t.fn.carousel.Constructor=i,t.fn.carousel.noConflict=function(){return
+t.fn.carousel=s,this};var n=function(i){var <a
+href="^\s">s,n=t(this),o=t(n.attr(“data-target”)||(s=n.attr(“href”))&&s.replace(/.*(?=#</a>+$)/,“”));if(o.hasClass(“carousel”)){var
+a=t.extend({},o.data(),n.data()),r=n.attr(“data-slide-to”);r&amp;&amp;(a.interval=!1),e.call(o,a),r&amp;&amp;o.data(“bs.carousel”).to®,i.preventDefault()}};<a
+href="data-slide">t(document).on(“click.bs.carousel.data-api”,“</a>”,<a
+href="data-slide-to">n).on(“click.bs.carousel.data-api”,“</a>”,n),t(window).on(“load”,function(){<a
+href="data-ride="carousel"">t(‘</a>&#39;).each(function(){var
+i=t(this);e.call(i,i.data())})})}(jQuery),+function(t){“use
+strict”;function e(e,s){return this.each(function(){var
+n=t(this),o=n.data(“bs.modal”),a=t.extend({},i.DEFAULTS,n.data(),“object”==typeof
+e&amp;&amp;e);o||n.data(“bs.modal”,o=new i(this,a)),“string”==typeof <a
+href="e">e?o</a>(s):a.show&amp;&amp;o.show(s)})}var
+i=function(e,i){this.options=i,this.$body=t(document.body),this.$element=t(e),this.$dialog=this.$element.find(“.modal-dialog”),this.$backdrop=null,this.isShown=null,this.originalBodyPad=null,this.scrollbarWidth=0,this.ignoreBackdropClick=!1,this.options.remote&amp;&amp;this.$element.find(“.modal-content”).load(this.options.remote,t.proxy(function(){this.$element.trigger(“loaded.bs.modal”)},this))};i.VERSION=“3.3.7”,i.TRANSITION_DURATION=300,i.BACKDROP_TRANSITION_DURATION=150,i.DEFAULTS={backdrop:!0,keyboard:!0,show:!0},i.prototype.toggle=function(t){return
+this.isShown?this.hide():this.show(t)},i.prototype.show=function(e){var
+s=this,n=t.Event(“show.bs.modal”,{relatedTarget:e});<a
+href="data-dismiss="modal"">this.$element.trigger(n),this.isShown||n.isDefaultPrevented()||(this.isShown=!0,this.checkScrollbar(),this.setScrollbar(),this.$body.addClass(“modal-open”),this.escape(),this.resize(),this.$element.on(“click.dismiss.bs.modal”,’</a>&#39;,t.proxy(this.hide,this)),this.$dialog.on(“mousedown.dismiss.bs.modal”,function(){s.$element.one(“mouseup.dismiss.bs.modal”,function(e){t(e.target).is(s.$element)&amp;&amp;(s.ignoreBackdropClick=!0)})}),this.backdrop(function(){var
+<a
+href="0">n=t.support.transition&&s.$element.hasClass(“fade”);s.$element.parent().length||s.$element.appendTo(s.$body),s.$element.show().scrollTop(0),s.adjustDialog(),n&&s.$element</a>.offsetWidth,s.$element.addClass(“in”),s.enforceFocus();var
+o=t.Event(“shown.bs.modal”,{relatedTarget:e});n?s.$dialog.one(“bsTransitionEnd”,function(){s.$element.trigger(“focus”).trigger(o)}).emulateTransitionEnd(i.TRANSITION_DURATION):s.$element.trigger(“focus”).trigger(o)}))},i.prototype.hide=function(e){e&amp;&amp;e.preventDefault(),e=t.Event(“hide.bs.modal”),this.$element.trigger(e),this.isShown&amp;&amp;!e.isDefaultPrevented()&amp;&amp;(this.isShown=!1,this.escape(),this.resize(),t(document).off(“focusin.bs.modal”),this.$element.removeClass(“in”).off(“click.dismiss.bs.modal”).off(“mouseup.dismiss.bs.modal”),this.$dialog.off(“mousedown.dismiss.bs.modal”),t.support.transition&amp;&amp;this.$element.hasClass(“fade”)?this.$element.one(“bsTransitionEnd”,t.proxy(this.hideModal,this)).emulateTransitionEnd(i.TRANSITION_DURATION):this.hideModal())},i.prototype.enforceFocus=function(){t(document).off(“focusin.bs.modal”).on(“focusin.bs.modal”,t.proxy(function(t){<a
+href="0">document===t.target||this.$element</a>===t.target||this.$element.has(t.target).length||this.$element.trigger(“focus”)},this))},i.prototype.escape=function(){this.isShown&amp;&amp;this.options.keyboard?this.$element.on(“keydown.dismiss.bs.modal”,t.proxy(function(t){27==t.which&amp;&amp;this.hide()},this)):this.isShown||this.$element.off(“keydown.dismiss.bs.modal”)},i.prototype.resize=function(){this.isShown?t(window).on(“resize.bs.modal”,t.proxy(this.handleUpdate,this)):t(window).off(“resize.bs.modal”)},i.prototype.hideModal=function(){var
+t=this;this.$element.hide(),this.backdrop(function(){t.$body.removeClass(“modal-open”),t.resetAdjustments(),t.resetScrollbar(),t.$element.trigger(“hidden.bs.modal”)})},i.prototype.removeBackdrop=function(){this.$backdrop&amp;&amp;this.$backdrop.remove(),this.$backdrop=null},i.prototype.backdrop=function(e){var
+s=this,n=this.$element.hasClass(“fade”)?“fade”:“”;if(this.isShown&amp;&amp;this.options.backdrop){var
+o=t.support.transition&amp;&amp;n;if(this.$backdrop=t(document.createElement(“div”)).addClass(“modal-backdrop
+”+n).appendTo(this.$body),this.$element.on(“click.dismiss.bs.modal”,t.proxy(function(t){return
+<a
+href="0">this.ignoreBackdropClick?void(this.ignoreBackdropClick=!1):void(t.target===t.currentTarget&&(“static”==this.options.backdrop?this.$element</a>.focus():this.hide()))},<a
+href="0">this)),o&&this.$backdrop</a>.offsetWidth,this.$backdrop.addClass(“in”),!e)return;o?this.$backdrop.one(“bsTransitionEnd”,e).emulateTransitionEnd(i.BACKDROP_TRANSITION_DURATION):e()}else
+if(!this.isShown&amp;&amp;this.$backdrop){this.$backdrop.removeClass(“in”);var
+a=function(){s.removeBackdrop(),e&amp;&amp;e()};t.support.transition&amp;&amp;this.$element.hasClass(“fade”)?this.$backdrop.one(“bsTransitionEnd”,a).emulateTransitionEnd(i.BACKDROP_TRANSITION_DURATION):a()}else
+e&amp;&amp;e()},i.prototype.handleUpdate=function(){this.adjustDialog()},i.prototype.adjustDialog=function(){var
+<a
+href="0">t=this.$element</a>.scrollHeight&gt;document.documentElement.clientHeight;this.$element.css({paddingLeft:!this.bodyIsOverflowing&amp;&amp;t?this.scrollbarWidth:“”,paddingRight:this.bodyIsOverflowing&amp;&amp;!t?this.scrollbarWidth:“”})},i.prototype.resetAdjustments=function(){this.$element.css({paddingLeft:“”,paddingRight:“”})},i.prototype.checkScrollbar=function(){var
+t=window.innerWidth;if(!t){var
+e=document.documentElement.getBoundingClientRect();t=e.right-Math.abs(e.left)}this.bodyIsOverflowing=document.body.clientWidth&lt;t,this.scrollbarWidth=this.measureScrollbar()},i.prototype.setScrollbar=function(){var
+t=parseInt(this.$body.css(“padding-right”)||0,10);this.originalBodyPad=document.body.style.paddingRight||“”,this.bodyIsOverflowing&amp;&amp;this.$body.css(“padding-right”,t+this.scrollbarWidth)},i.prototype.resetScrollbar=function(){this.$body.css(“padding-right”,this.originalBodyPad)},i.prototype.measureScrollbar=function(){var
+t=document.createElement(“div”);t.className=“modal-scrollbar-measure”,this.$body.append(t);var
+e=t.offsetWidth-t.clientWidth;return <a
+href="0">this.$body</a>.removeChild(t),e};var
+s=t.fn.modal;t.fn.modal=e,t.fn.modal.Constructor=i,t.fn.modal.noConflict=function(){return
+t.fn.modal=s,this},<a
+href="data-toggle="modal"">t(document).on(“click.bs.modal.data-api”,‘</a>&#39;,function(i){var
+<a
+href="^\s">s=t(this),n=s.attr(“href”),o=t(s.attr(“data-target”)||n&&n.replace(/.*(?=#</a>+$)/,“”)),a=o.data(“bs.modal”)?“toggle”:t.extend({remote:!/#/.test(n)&amp;&amp;n},o.data(),s.data());s.is(“a”)&amp;&amp;i.preventDefault(),o.one(“show.bs.modal”,function(t){t.isDefaultPrevented()||o.one(“hidden.bs.modal”,function(){s.is(“:visible”)&amp;&amp;s.trigger(“focus”)})}),e.call(o,a,this)})}(jQuery),+function(t){“use
+strict”;function e(e){return this.each(function(){var
+s=t(this),n=s.data(“bs.affix”),o=“object”==typeof
+e&amp;&amp;e;n||s.data(“bs.affix”,n=new i(this,o)),“string”==typeof <a
+href="e">e&&n</a>()})}var
+i=function(e,s){this.options=t.extend({},i.DEFAULTS,s),this.$target=t(this.options.target).on(“scroll.bs.affix.data-api”,t.proxy(this.checkPosition,this)).on(“click.bs.affix.data-api”,t.proxy(this.checkPositionWithEventLoop,this)),this.$element=t(e),this.affixed=null,this.unpin=null,this.pinnedOffset=null,this.checkPosition()};i.VERSION=“3.3.7”,i.RESET=“affix
+affix-top
+affix-bottom”,i.DEFAULTS={offset:0,target:window},i.prototype.getState=function(t,e,i,s){var
+n=this.$target.scrollTop(),o=this.$element.offset(),a=this.$target.height();if(null!=i&amp;&amp;“top”==this.affixed)return
+i&gt;n?“top”:!1;if(“bottom”==this.affixed)return
+null!=i?n+this.unpin&lt;=o.top?!1:“bottom”:t-s&gt;=n+a?!1:“bottom”;var
+r=null==this.affixed,l=r?n:o.top,h=r?a:e;return
+null!=i&amp;&amp;i&gt;=n?“top”:null!=s&amp;&amp;l+h&gt;=t-s?“bottom”:!1},i.prototype.getPinnedOffset=function(){if(this.pinnedOffset)return
+this.pinnedOffset;this.$element.removeClass(i.RESET).addClass(“affix”);var
+t=this.$target.scrollTop(),e=this.$element.offset();return
+this.pinnedOffset=e.top-t},i.prototype.checkPositionWithEventLoop=function(){setTimeout(t.proxy(this.checkPosition,this),1)},i.prototype.checkPosition=function(){if(this.$element.is(“:visible”)){var
+e=this.$element.height(),s=this.options.offset,n=s.top,o=s.bottom,a=Math.max(t(document).height(),t(document.body).height());“object”!=typeof
+s&amp;&amp;(o=n=s),“function”==typeof
+n&amp;&amp;(n=s.top(this.$element)),“function”==typeof
+o&amp;&amp;(o=s.bottom(this.$element));var
+r=this.getState(a,e,n,o);if(this.affixed!=r){null!=this.unpin&amp;&amp;this.$element.css(“top”,“”);var
+l=“affix”+(r?“-”+r:“”),h=t.Event(l+“.bs.affix”);if(this.$element.trigger(h),h.isDefaultPrevented())return;this.affixed=r,this.unpin=“bottom”==r?this.getPinnedOffset():null,this.$element.removeClass(i.RESET).addClass(l).trigger(l.replace(“affix”,“affixed”)+“.bs.affix”)}“bottom”==r&amp;&amp;this.$element.offset({top:a-e-o})}};var
+s=t.fn.affix;t.fn.affix=e,t.fn.affix.Constructor=i,t.fn.affix.noConflict=function(){return
+t.fn.affix=s,this},t(window).on(“load”,function(){<a
+href="data-spy="affix"">t(’</a>&#39;).each(function(){var
+i=t(this),s=i.data();s.offset=s.offset||{},null!=s.offsetBottom&amp;&amp;(s.offset.bottom=s.offsetBottom),null!=s.offsetTop&amp;&amp;(s.offset.top=s.offsetTop),e.call(i,s)})})}(jQuery),+function(t){“use
+strict”;function e(e){var <a
+href="^\s">i,s=e.attr(“data-target”)||(i=e.attr(“href”))&&i.replace(/.*(?=#</a>+$)/,“”);return
+t(s)}function i(e){return this.each(function(){var
+i=t(this),n=i.data(“bs.collapse”),o=t.extend({},s.DEFAULTS,i.data(),“object”==typeof
+e&amp;&amp;e);!n&amp;&amp;o.toggle&amp;&amp;/show|hide/.test(e)&amp;&amp;(o.toggle=!1),n||i.data(“bs.collapse”,n=new
+s(this,o)),“string”==typeof <a href="e">e&&n</a>()})}var
+s=function(e,i){this.$element=t(e),this.options=t.extend({},<a
+href="data-toggle="collapse"">s.DEFAULTS,i),this.$trigger=t(‘</a>[<a
+href="data-toggle="collapse"">href=“#’e.id’”],</a>[data-target=“#&#39;<code>e.id</code>&#39;”]&#39;),this.transitioning=null,this.options.parent?this.$parent=this.getParent():this.addAriaAndCollapsedClass(this.$element,this.$trigger),this.options.toggle&amp;&amp;this.toggle()};s.VERSION=“3.3.7”,s.TRANSITION_DURATION=350,s.DEFAULTS={toggle:!0},s.prototype.dimension=function(){var
+t=this.$element.hasClass(“width”);return
+t?“width”:“height”},s.prototype.show=function(){if(!this.transitioning&amp;&amp;!this.$element.hasClass(“in”)){var
+e,n=this.$parent&amp;&amp;this.$parent.children(“.panel”).children(“.in,
+.collapsing”);if(!(n&amp;&amp;n.length&amp;&amp;(e=n.data(“bs.collapse”),e&amp;&amp;e.transitioning))){var
+o=t.Event(“show.bs.collapse”);if(this.$element.trigger(o),!o.isDefaultPrevented()){n&amp;&amp;n.length&amp;&amp;(i.call(n,“hide”),e||n.data(“bs.collapse”,null));var
+<a
+href="a">a=this.dimension();this.$element.removeClass(“collapse”).addClass(“collapsing”)</a>(0).attr(“aria-expanded”,!0),this.$trigger.removeClass(“collapsed”).attr(“aria-expanded”,!0),this.transitioning=1;var
+r=function(){this.$element.removeClass(“collapsing”).addClass(“collapse <a
+href="a">in”)</a>(“”),this.transitioning=0,this.$element.trigger(“shown.bs.collapse”)};if(!t.support.transition)return
+r.call(this);var <a href=""scroll",a">l=t.camelCase(</a>.<a
+href="a">join(“-”));this.$element.one(“bsTransitionEnd”,t.proxy(r,this)).emulateTransitionEnd(s.TRANSITION_DURATION)</a>(<a
+href="0">this.$element</a>[l])}}}},s.prototype.hide=function(){if(!this.transitioning&amp;&amp;this.$element.hasClass(“in”)){var
+e=t.Event(“hide.bs.collapse”);if(this.$element.trigger(e),!e.isDefaultPrevented()){var
+<a href="i">i=this.dimension();this.$element</a>(<a
+href="i">this.$element</a>())[0].offsetHeight,this.$element.addClass(“collapsing”).removeClass(“collapse
+in”).attr(“aria-expanded”,!1),this.$trigger.addClass(“collapsed”).attr(“aria-expanded”,!1),this.transitioning=1;var
+n=function(){this.transitioning=0,this.$element.removeClass(“collapsing”).addClass(“collapse”).trigger(“hidden.bs.collapse”)};return
+t.support.transition?void <a
+href="i">this.$element</a>(0).one(“bsTransitionEnd”,t.proxy(n,this)).emulateTransitionEnd(s.TRANSITION_DURATION):n.call(this)}}},s.prototype.toggle=function(){<a
+href="this.$element.hasClass("in")?"hide":"show"">this</a>()},s.prototype.getParent=function(){return
+<a
+href="data-toggle="collapse"">t(this.options.parent).find(‘</a>[data-parent=“&#39;<code>this.options.parent</code>&#39;”]&#39;).each(t.proxy(function(i,s){var
+n=t(s);this.addAriaAndCollapsedClass(e(n),n)},this)).end()},s.prototype.addAriaAndCollapsedClass=function(t,e){var
+i=t.hasClass(“in”);t.attr(“aria-expanded”,i),e.toggleClass(“collapsed”,!i).attr(“aria-expanded”,i)};var
+n=t.fn.collapse;t.fn.collapse=i,t.fn.collapse.Constructor=s,t.fn.collapse.noConflict=function(){return
+t.fn.collapse=n,this},<a
+href="data-toggle="collapse"">t(document).on(“click.bs.collapse.data-api”,’</a>&#39;,function(s){var
+n=t(this);n.attr(“data-target”)||s.preventDefault();var
+o=e(n),a=o.data(“bs.collapse”),r=a?“toggle”:n.data();i.call(o,r)})}(jQuery),+function(t){“use
+strict”;function
+e(i,s){this.$body=t(document.body),this.$scrollElement=t(t(i).is(document.body)?window:i),this.options=t.extend({},e.DEFAULTS,s),this.selector=(this.options.target||“”)+“
+.nav li &gt; <a
+href="">a”,this.offsets=[],this.targets=</a>,this.activeTarget=null,this.scrollHeight=0,this.$scrollElement.on(“scroll.bs.scrollspy”,t.proxy(this.process,this)),this.refresh(),this.process()}function
+i(i){return this.each(function(){var
+s=t(this),n=s.data(“bs.scrollspy”),o=“object”==typeof
+i&amp;&amp;i;n||s.data(“bs.scrollspy”,n=new e(this,o)),“string”==typeof <a
+href="i">i&&n</a>()})}e.VERSION=“3.3.7”,e.DEFAULTS={offset:10},e.prototype.getScrollHeight=function(){return
+<a href="0">this.$scrollElement</a>.<a
+href="0">scrollHeight||Math.max(this.$body</a>.scrollHeight,document.documentElement.scrollHeight)},e.prototype.refresh=function(){var
+<a href="">e=this,i=“offset”,s=0;this.offsets=[],this.targets=</a>,<a
+href="0">this.scrollHeight=this.getScrollHeight(),t.isWindow(this.$scrollElement</a>)||(i=“position”,s=this.$scrollElement.scrollTop()),this.$body.find(this.selector).map(function(){var
+e=t(this),n=e.data(“target”)||e.attr(“href”),o=/^#./.test(n)&amp;&amp;t(n);return
+<a
+href="i">o&&o.length&&o.is(“:visible”)&&[[o</a>().top+s,n]]||null}).sort(function(t,e){return
+<a href="0">t</a>-<a href="0">e</a>}).each(function(){<a
+href="0">e.offsets.push(this</a>),<a
+href="1">e.targets.push(this</a>)})},e.prototype.process=function(){var
+t,e=this.$scrollElement.scrollTop()+this.options.offset,i=this.getScrollHeight(),s=this.options.offset+i-this.$scrollElement.height(),n=this.offsets,o=this.targets,a=this.activeTarget;if(this.scrollHeight!=i&amp;&amp;this.refresh(),e&gt;=s)return
+<a href="o.length-1">a!=(t=o</a>)&amp;&amp;<a
+href="0">this.activate(t);if(a&&e<n</a>)return <a
+href="t">this.activeTarget=null,this.clear();for(t=n.length;t–;)a!=o</a>&amp;&amp;<a
+href="t">e>=n</a>&amp;&amp;(void <a href="t+1">0===n</a>||<a
+href="t+1">e<n</a>)&amp;&amp;<a
+href="t">this.activate(o</a>)},e.prototype.activate=function(e){this.activeTarget=e,this.clear();var
+<a
+href="data-target="'e'"">i=this.selector+‘</a>,&#39;<code>this.selector'[href="'e'"]</code>&#39;,s=t(i).parents(“li”).addClass(“active”);s.parent(“.dropdown-menu”).length&amp;&amp;(s=s.closest(“li.dropdown”).addClass(“active”)),s.trigger(“activate.bs.scrollspy”)},e.prototype.clear=function(){t(this.selector).parentsUntil(this.options.target,“.active”).removeClass(“active”)};var
+s=t.fn.scrollspy;t.fn.scrollspy=i,t.fn.scrollspy.Constructor=e,t.fn.scrollspy.noConflict=function(){return
+t.fn.scrollspy=s,this},t(window).on(“load.bs.scrollspy.data-api”,function(){<a
+href="data-spy="scroll"">t(’</a>&#39;).each(function(){var
+e=t(this);i.call(e,e.data())})})}(jQuery),+function(t){“use
+strict”;function e(){var
+t=document.createElement(“bootstrap”),e={WebkitTransition:“webkitTransitionEnd”,MozTransition:“transitionend”,OTransition:“oTransitionEnd
+otransitionend”,transition:“transitionend”};for(var i in e)if(void <a
+href="i">0!==t.style</a>)return{<a
+href="i">end:e</a>};return!1}t.fn.emulateTransitionEnd=function(e){var
+i=!1,s=this;t(this).one(“bsTransitionEnd”,function(){i=!0});var
+n=function(){i||t(s).trigger(t.support.transition.end)};return
+setTimeout(n,e),this},t(function(){t.support.transition=e(),t.support.transition&amp;&amp;(t.event.special.bsTransitionEnd={bindType:t.support.transition.end,delegateType:t.support.transition.end,handle:function(e){return
+t(e.target).is(this)?e.handleObj.handler.apply(this,arguments):void
+0}})})}(jQuery);</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.0.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

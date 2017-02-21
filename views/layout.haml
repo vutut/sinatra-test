@@ -1,0 +1,41 @@
+!!! 5
+- CURRENT_URL = request.path_info
+%html
+	%head
+		%meta{ :charset => "utf-8"}
+		%meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge"}
+		%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1, shrink-to-fit=no"}
+		%meta{ :name => "theme-color", :content => "#2F3BA2"}
+		%title= @phrase[:title]
+		%link{ :rel => "stylesheet", :href => "styles/bootstrap.min.css" }
+		%link{ :href => "https://fonts.googleapis.com/css?family=Montserrat|Roboto&subset=latin-ext", :rel => "stylesheet"}
+		%link{ :rel=> "stylesheet", :href=> "styles/bootstrap-material-design.min.css"}
+		%link{ :href => "styles/main.css", :rel => "stylesheet"}
+	%body#myPage.pagecontainer
+		.navbar.navbar-fixed-top.navbar-inverse.one-edge-shadow#nav{ "data-spy" => "affix"}
+			.navbar-inner.container-fluid
+				.navbar-header
+					%button.navbar-toggle{ :type => "button", "data-toggle" => "collapse", "data-target" => ".navbar-inverse-collapse"}
+						%span.icon-bar
+						%span.icon-bar
+						%span.icon-bar
+					%a.navbar-brand{ :itemprop => "logo", :href => '/'}
+						%img{ :src => "images/adilogo_clear.png", :alt => "adilogo", :width => "140px"}
+				.collapse.navbar-collapse.navbar-inverse-collapse#myNavbar
+					%ul.nav.navbar-nav.navbar-right
+						%li.hvr-underline-reveal{ :class => "#{ 'active' if CURRENT_URL == '/'}"}
+							%a{ :href => '/'}= @phrase[:home]
+						%li.hvr-underline-reveal{ :class => "#{ 'active' if CURRENT_URL == '/about'}"}
+							%a{ :href => '/about'}= @phrase[:abouthead]
+						%li.hvr-underline-reveal{ :class => "#{ 'active' if CURRENT_URL == '/products'}"}
+							%a{ :href => '/products'}= @phrase[:products]
+						%li.hvr-underline-reveal{ :class => "#{ 'active' if CURRENT_URL == '/prodej'}"}
+							%a{ :href => '/prodej'}= @phrase[:sale]
+						%li.hvr-underline-reveal{ :class => "#{ 'active' if CURRENT_URL == '/support'}"}
+							%a{ :href => '/support'}= @phrase[:support]
+						%li.hvr-underline-reveal
+							%a{ :href => '/#contact'}= @phrase[:contact]
+		.mypage-content
+		= yield
+		
+		

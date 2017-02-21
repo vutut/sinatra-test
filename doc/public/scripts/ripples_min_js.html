@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>ripples.min.js - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+  var index_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../public/scripts/bootstrap_min_js.html">bootstrap.min.js</a>
+  
+    <li><a href="../../public/scripts/handlebars-v4_0_5_js.html">handlebars-v4.0.5.js</a>
+  
+    <li><a href="../../public/scripts/jquery-1_9_1_min_js.html">jquery-1.9.1.min.js</a>
+  
+    <li><a href="../../public/scripts/material_min_js.html">material.min.js</a>
+  
+    <li><a href="../../public/scripts/nano_js.html">nano.js</a>
+  
+    <li><a href="../../public/scripts/ripples_min_js.html">ripples.min.js</a>
+  
+    <li><a href="../../public/styles/bootstrap-material-design_min_css.html">bootstrap-material-design.min.css</a>
+  
+    <li><a href="../../public/styles/bootstrap_min_css.html">bootstrap.min.css</a>
+  
+    <li><a href="../../public/styles/main_css.html">main.css</a>
+  
+    <li><a href="../../public/styles/ripples_min_css.html">ripples.min.css</a>
+  
+    <li><a href="../../views/about_haml.html">about.haml</a>
+  
+    <li><a href="../../views/index_haml.html">index.haml</a>
+  
+    <li><a href="../../views/layout_haml.html">layout.haml</a>
+  
+    <li><a href="../../views/products_haml.html">products.haml</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page public/scripts/ripples.min.js">
+
+<p>!function(a,b,c,d){“use strict”;function
+e(b,c){g=this,this.element=a(b),this.options=a.extend({},h,c),this._defaults=h,this._name=f,this.init()}var
+f=“ripples”,g=null,h={};e.prototype.init=function(){var
+c=this.element;c.on(“mousedown
+touchstart”,function(d){if(!g.isTouch()||“mousedown”!==d.type){c.find(“.ripple-container”).length||c.append(&#39;&lt;div
+class=“ripple-container”&gt;&lt;/div&gt;&#39;);var
+e=c.children(“.ripple-container”),f=g.getRelY(e,d),h=g.getRelX(e,d);if(f||h){var
+i=g.getRipplesColor©,j=a(“&lt;div&gt;&lt;/div&gt;”);j.addClass(“ripple”).css({left:h,top:f,“background-color”:i}),e.append(j),function(){return
+<a
+href="0">b.getComputedStyle(j</a>).opacity}(),g.rippleOn(c,j),setTimeout(function(){g.rippleEnd(j)},500),c.on(“mouseup
+mouseleave
+touchend”,function(){j.data(“mousedown”,“off”),“off”===j.data(“animating”)&amp;&amp;g.rippleOut(j)})}}})},e.prototype.getNewSize=function(a,b){return
+Math.max(a.outerWidth(),a.outerHeight())/b.outerWidth()*2.5},e.prototype.getRelX=function(a,b){var
+c=a.offset();return <a
+href="0">g.isTouch()?(b=b.originalEvent,1===b.touches.length?b.touches</a>.pageX-c.left:!1):b.pageX-c.left},e.prototype.getRelY=function(a,b){var
+c=a.offset();return <a
+href="0">g.isTouch()?(b=b.originalEvent,1===b.touches.length?b.touches</a>.pageY-c.top:!1):b.pageY-c.top},e.prototype.getRipplesColor=function(a){var
+<a
+href="0">c=a.data(“ripple-color”)?a.data(“ripple-color”):b.getComputedStyle(a</a>).color;return
+c},e.prototype.hasTransitionSupport=function(){var
+a=c.body||c.documentElement,b=a.style,e=b.transition!==d||b.WebkitTransition!==d||b.MozTransition!==d||b.MsTransition!==d||b.OTransition!==d;return
+e},e.prototype.isTouch=function(){return/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera
+Mini/i.test(navigator.userAgent)},e.prototype.rippleEnd=function(a){a.data(“animating”,“off”),“off”===a.data(“mousedown”)&amp;&amp;g.rippleOut(a)},e.prototype.rippleOut=function(a){a.off(),g.hasTransitionSupport()?a.addClass(“ripple-out”):a.animate({opacity:0},100,function(){a.trigger(“transitionend”)}),a.on(“transitionend
+webkitTransitionEnd oTransitionEnd
+MSTransitionEnd”,function(){a.remove()})},e.prototype.rippleOn=function(a,b){var
+c=g.getNewSize(a,b);g.hasTransitionSupport()?b.css({“-ms-transform”:“scale(”<code>c</code>“)”,“-moz-transform”:“scale(”<code>c</code>“)”,“-webkit-transform”:“scale(”<code>c</code>“)”,transform:“scale(”<code>c</code>“)”}).addClass(“ripple-on”).data(“animating”,“on”).data(“mousedown”,“on”):b.animate({width:2*Math.max(a.outerWidth(),a.outerHeight()),height:2*Math.max(a.outerWidth(),a.outerHeight()),“margin-left”:-1*Math.max(a.outerWidth(),a.outerHeight()),“margin-top”:-1*Math.max(a.outerWidth(),a.outerHeight()),opacity:.2},500,function(){b.trigger(“transitionend”)})},a.fn.ripples=function(b){return
+this.each(function(){a.data(this,“plugin_”+f)||a.data(this,“plugin_”+f,new
+e(this,b))})}}(jQuery,window,document); //#
+sourceMappingURL=ripples.min.js.map</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.0.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
